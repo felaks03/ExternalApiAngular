@@ -3,12 +3,26 @@
     padding: 1rem;    
 }
 .navbar{
-    border-bottom: 2px solid black;
-    margin: 0 2rem 1rem 2rem;
+    margin: 0 2rem 0 2rem;
 }
 .nav-link{
     color: black;
+    margin-bottom: 0;
 }
 .home{
     color: tomato;
+}
+.primary-nav{
+    border-bottom: 2px solid black;
+}
+.secondary-nav{
+    padding: 0;
+    border-bottom: 2px solid black;
+}
+.btn-nav{
+    border: 0;
+    background-color: white;
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
+    display: block;
 }

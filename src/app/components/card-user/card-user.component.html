@@ -1,1 +1,21 @@
-<p>card-user works!</p>
+
+<li class="row d-flex">
+    <div class="card-user col-3" *ngFor="let user of myUsers">
+        <img src={{user.image}} class="profile" alt="">
+        <h1 class="name">{{user.first_name}} {{user.last_name}}</h1>
+        <div class="d-flex justify-content-between all-btn">
+            <button class="btn d-flex c-green">
+                <img src="../../../assets/fa-icons/details.png" class="icon" alt="">
+                <p class="btn-text">Ver Detalles</p>
+            </button>
+            <button class="btn d-flex c-blue">
+                <img src="../../../assets/fa-icons/update.png" class="icon" alt="">
+                <p class="btn-text">Actualizar</p>
+            </button>
+            <button class="btn d-flex c-red">
+                <img src="../../../assets/fa-icons/delete.png" class="icon" alt="">
+                <p class="btn-text">Borrar</p>
+            </button>
+        </div>
+    </div>
+</li>

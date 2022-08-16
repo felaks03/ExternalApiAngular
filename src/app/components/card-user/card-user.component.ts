@@ -19,8 +19,5 @@ export class CardUserComponent implements OnInit {
   async ngOnInit(): Promise<void> {
     let response = this.arrData = await this.usersService.getAll()
     this.myUsers = response.data
-    console.log(this.myUsers)
   }
-
-
 }

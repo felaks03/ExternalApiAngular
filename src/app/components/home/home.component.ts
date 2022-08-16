@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { User } from 'src/app/interfaces/user.interface';
+import { UsersService } from 'src/app/services/users.service';
 
 @Component({
   selector: 'app-home',
@@ -7,9 +9,17 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HomeComponent implements OnInit {
 
-  constructor() { }
+  constructor
+  (
+    private usersService: UsersService
+  ) { }
 
-  ngOnInit(): void {
+  arrData: User[] = []
+  myUsers: User[] = []
+  async ngOnInit(): Promise<void> {
+    let response = this.arrData = await this.usersService.getAll()
+    this.myUsers = response.data
+    console.log(this.myUsers)
   }
 
 }
