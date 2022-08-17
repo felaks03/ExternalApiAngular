@@ -3,7 +3,8 @@
     padding: 1rem;    
 }
 .navbar{
-    margin: 0 2rem 0 2rem;
+    margin: 0 0 0 2rem;
+    width: calc(100vw - 4rem);
 }
 .nav-link{
     color: black;
