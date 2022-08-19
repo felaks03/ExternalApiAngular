@@ -4,15 +4,15 @@
         <img src={{user.image}} class="profile" alt="">
         <h1 class="name">{{user.first_name}} {{user.last_name}}</h1>
         <div class="d-flex justify-content-between all-btn">
-            <button class="btn d-flex c-green" value={{user.id}} [routerLink]="['/user', user.id]" (click)="getById($event)">
+            <button class="btn d-flex c-green" value={{user.id}} [routerLink]="['/user', user.id]">
                 <img src="../../../assets/fa-icons/details.png" class="icon" alt="">
                 <p class="btn-text">Ver Detalles</p>
             </button>
-            <button class="btn d-flex c-blue" value={{user.id}} (click)="getById($event)">
+            <button class="btn d-flex c-blue" value={{user.id}}>
                 <img src="../../../assets/fa-icons/update.png" class="icon" alt="">
                 <p class="btn-text">Actualizar</p>
             </button>
-            <button class="btn d-flex c-red" value={{user.id}} (click)="getById($event)">
+            <button class="btn d-flex c-red" value={{user.id}}>
                 <img src="../../../assets/fa-icons/delete.png" class="icon" value="delete" alt="">
                 <p class="btn-text" value="delete">Borrar</p>
             </button>

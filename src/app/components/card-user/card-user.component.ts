@@ -20,8 +20,4 @@ export class CardUserComponent implements OnInit {
     let response = this.arrData = await this.usersService.getAll()
     this.myUsers = response.data
   }
-
-  getById($event: any) {
-    console.log($event.target.value)
-  }
 }
