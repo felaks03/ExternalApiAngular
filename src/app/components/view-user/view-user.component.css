@@ -1,0 +1,82 @@
+.image, .data {
+    width: 45vw;
+    margin-top: 6rem;
+}
+.image{
+    border-right: 2px solid black;
+}
+.profile-i{
+    width: 100%;
+    padding: 0 10rem;
+    border-radius: 50%;
+    justify-content: center;
+}
+
+.data{
+    padding: 1rem 4rem;
+}
+
+.nombre{
+    margin-bottom: 1rem;
+}
+.apellido{
+    font-size: 2rem;
+    margin-bottom: 4rem;
+}
+.username{
+    font-size: 1.6rem;
+    margin-bottom: 2rem;
+}
+.email{
+    font-size: 1.6rem;
+    margin-bottom: 4rem;
+}
+.username-b, .email-b{
+    font-weight: 700;
+}
+
+.btn {
+    font-size: 1.2rem;
+    padding: calc(0.75rem + 2px) calc(1.5rem + 2px);
+    align-items: center;
+    border: 1px solid black;
+    background-color: white;
+    border-radius: 0;
+}
+.btn:nth-child(2){
+    border-right: none;
+    border-left: none;
+}
+.btn:nth-child(1){
+    border-radius: 10px 0 0 10px;
+}
+.btn:nth-child(3){
+    border-radius: 0 10px 10px 0;
+}
+
+.btn-text {
+    margin-bottom: 0;
+    padding-top: 0.2rem;
+    padding-left: 0.2rem;
+    pointer-events: none;
+}
+
+
+
+.c-red:hover {
+    color: red;
+    border: 3px solid red;
+    padding: 0.75rem 1.5rem;
+}
+
+.c-blue:hover {
+    color: blue;
+    border: 3px solid blue;
+    padding: 0.75rem calc(1.5rem - 1px);
+}
+
+.c-grey:hover {
+    color: grey;
+    border: 3px solid grey;
+    padding: 0.75rem 1.5rem;
+}

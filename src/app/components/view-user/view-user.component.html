@@ -1,2 +1,22 @@
-<p>view-user works!</p>
-
+<div class="user-info d-flex">
+    <div class="image">
+        <img src={{myUser.image}} alt="" class="profile-i">
+    </div>
+    <div class="data">
+        <h1 class="nombre">{{myUser.first_name}}</h1>
+        <h2 class="apellido">{{myUser.last_name}}</h2>
+        <p class="username"><span class="username-b">Nombre usuario:</span> {{myUser.username}}</p>
+        <p class="email"><span class="email-b">Email:</span> {{myUser.email}}</p>
+        <div class="d-flex justify-content-start all-btn">
+            <button class="btn d-flex c-red">
+                <p class="btn-text">Eliminar</p>
+            </button>
+            <button class="btn d-flex c-blue">
+                <p class="btn-text">Actualizar</p>
+            </button>
+            <button class="btn d-flex c-grey">
+                <p class="btn-text" value="delete">Volver al listado</p>
+            </button>
+        </div>
+    </div>
+</div>
