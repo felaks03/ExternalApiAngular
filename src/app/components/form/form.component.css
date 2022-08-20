@@ -1,0 +1,29 @@
+.form{
+    padding: 6rem 8rem;
+    font-size: 1.5rem;
+    margin-top: 8rem;
+    border: 1px solid grey;
+    border-radius: 30px;
+    width: max(100vw - 40rem, 50rem);
+    margin-inline: auto;
+}
+
+.name, .email{
+    margin-right: 2rem;
+}
+.username, .name, .apellido, .email{
+    width: calc(50% - 1rem);
+}
+.half-i{
+    width: max(calc(50vw - 20rem - 9rem), 100%);
+}
+input{
+    height: 3rem;
+    margin-bottom: 1rem;
+    font-size: 1.2rem;
+}
+.btn{
+    padding: 1rem;
+    width: max(20%, 100px);
+    margin-top: 1rem;
+}

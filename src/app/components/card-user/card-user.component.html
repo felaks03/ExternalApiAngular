@@ -8,7 +8,7 @@
                 <img src="../../../assets/fa-icons/details.png" class="icon" alt="">
                 <p class="btn-text">Ver Detalles</p>
             </button>
-            <button class="btn d-flex c-blue" value={{user.id}}>
+            <button class="btn d-flex c-blue" value={{user.id}} [routerLink]="['/updateuser', user.id]">
                 <img src="../../../assets/fa-icons/update.png" class="icon" alt="">
                 <p class="btn-text">Actualizar</p>
             </button>

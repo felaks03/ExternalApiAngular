@@ -1,6 +1,7 @@
 .nav-item{
     font-size: 1.2rem;
-    padding: 1rem;    
+    margin: 1rem 0.75rem;    
+    padding: calc(0.5rem + 2px) calc(1rem + 2px);
 }
 .navbar{
     margin: 0 0 0 2rem;
@@ -26,4 +27,9 @@
     margin-top: 0.5rem;
     margin-bottom: 0.5rem;
     display: block;
+}
+.nav-item:hover {
+    border: 2px black solid;
+    padding: 0.5rem 1rem;
+    border-radius: 10px;
 }

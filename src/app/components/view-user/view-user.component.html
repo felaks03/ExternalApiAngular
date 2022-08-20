@@ -11,10 +11,10 @@
             <button class="btn d-flex c-red">
                 <p class="btn-text">Eliminar</p>
             </button>
-            <button class="btn d-flex c-blue">
+            <button class="btn d-flex c-blue" [routerLink]="['/updateuser', myUser.id]">
                 <p class="btn-text">Actualizar</p>
             </button>
-            <button class="btn d-flex c-grey">
+            <button class="btn d-flex c-grey" [routerLink]="'/home'">
                 <p class="btn-text" value="delete">Volver al listado</p>
             </button>
         </div>
