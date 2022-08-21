@@ -27,3 +27,13 @@ input{
     width: max(20%, 100px);
     margin-top: 1rem;
 }
+
+@media (max-width: 767px) {
+    .form {
+        padding: 1.5rem 0 1.5rem 2rem;
+        width: 100vw;
+    }
+    .half-i, .full-i {
+        width: calc(100vw - 4rem);
+    }
+}
