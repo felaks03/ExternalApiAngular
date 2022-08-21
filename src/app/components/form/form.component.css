@@ -1,4 +1,4 @@
-.form{
+.form {
     padding: 6rem 8rem;
     font-size: 1.5rem;
     margin-top: 8rem;
@@ -8,24 +8,47 @@
     margin-inline: auto;
 }
 
-.name, .email{
+.first_name,
+.email {
     margin-right: 2rem;
 }
-.username, .name, .apellido, .email{
+
+.username,
+.first_name,
+.last_name,
+.email {
     width: calc(50% - 1rem);
 }
-.half-i{
+
+.half-i {
     width: max(calc(50vw - 20rem - 9rem), 100%);
 }
-input{
+
+input {
     height: 3rem;
-    margin-bottom: 1rem;
+    margin-bottom: 2.5rem;
     font-size: 1.2rem;
 }
-.btn{
+
+.btn {
     padding: 1rem;
     width: max(20%, 100px);
     margin-top: 1rem;
+}
+
+.error {
+    color: tomato;
+    font-size: 1rem;
+    margin-bottom: 1rem;
+}
+
+input.ng-invalid.ng-touched {
+    margin-bottom: 0;
+    border-bottom: 3px solid tomato;
+}
+
+input.ng-valid {
+    border-bottom: 3px solid lawngreen;
 }
 
 @media (max-width: 767px) {
@@ -33,7 +56,9 @@ input{
         padding: 1.5rem 0 1.5rem 2rem;
         width: 100vw;
     }
-    .half-i, .full-i {
+
+    .half-i,
+    .full-i {
         width: calc(100vw - 4rem);
     }
 }

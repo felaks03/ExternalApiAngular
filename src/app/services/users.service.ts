@@ -1,6 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { last, lastValueFrom } from 'rxjs';
+import { NEWUSERS } from '../db/newusers.db';
 import { User } from '../interfaces/user.interface';
 
 @Injectable({
@@ -10,22 +11,22 @@ export class UsersService {
 
   baseUrl: string = "https://peticiones.online/api/users"
 
+  newUsers: User[] = []
   constructor
   (
     private httpClient: HttpClient
-  ) { }
+  ) 
+  {
+    this.newUsers = NEWUSERS
+  }
 
   arrUsers: Promise<Object> | any
   getAll(): Promise<any> {
     this.arrUsers = lastValueFrom(this.httpClient.get(<any>(this.baseUrl)))
     return this.arrUsers
   }
-
-  myUser: User | any
-  getById(_id: number) {
-    fetch(this.baseUrl).then((response) => response.json()).then((user) => {
-      this.myUser = (user.data.find((users: { id: number; }) => users.id == _id))
-      console.log(this.myUser)
-    })
+  getAllNew(){
+    return this.newUsers
   }
+
 }
