@@ -1,8 +1,9 @@
 import { Component, OnInit } from '@angular/core';
-import { FormControl, FormGroup, Validators } from '@angular/forms';
-import { Route, Router } from '@angular/router';
+import { AbstractControl, FormControl, FormGroup, Validators } from '@angular/forms';
+import { ActivatedRoute, Route, Router } from '@angular/router';
 import { User } from 'src/app/interfaces/user.interface';
 import { UsersService } from 'src/app/services/users.service';
+import { createModifiersFromModifierFlags } from 'typescript';
 import { CardUserComponent } from '../card-user/card-user.component';
 
 @Component({
@@ -17,6 +18,7 @@ export class FormComponent implements OnInit {
   constructor
   (
     private usersService: UsersService,
+    private activatedRoute: ActivatedRoute,
     private router: Router
   ) 
   {
@@ -46,9 +48,29 @@ export class FormComponent implements OnInit {
     }, [])
   }
 
+  idFind: number = 0
+  myUser: User | undefined
+  updating: boolean = false
+
+  getUpdateUser() {
+    this.activatedRoute.params.subscribe((params: any) => {
+      this.idFind = params.id
+      console.log(this.idFind)
+    })
+    if(this.idFind != undefined){
+        this.myUser = this.myUsers?.find(user => user.id == this.idFind)
+        this.updating = true
+    } else {
+      this.updating = true
+    }
+  }
+
   formModel: FormGroup
 
-  ngOnInit(): void {
+  async ngOnInit(): Promise<void> {
+    let response = await this.usersService.getAll()
+    this.myUsers = response.data
+    this.getUpdateUser()
   }
 
   id: number = 12
@@ -74,4 +96,5 @@ export class FormComponent implements OnInit {
   checkControl(_input: string, _error: string) {
     return this.formModel.get(_input)?.hasError(_error) && this.formModel.get(_input)?.touched
   }
+
 }
