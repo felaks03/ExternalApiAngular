@@ -41,7 +41,7 @@
         <p class="error" *ngIf="checkControl('image', 'required')">Campo requerido</p>
         <p class="error" *ngIf="checkControl('image', 'pattern')">Pega la url de una imagen válida</p>
     </div>
-    <button type="submit" class="btn btn-primary" [disabled]="formModel.invalid" *ngIf="!updating">Sign in</button>
-    <button type="submit" class="btn btn-primary" [disabled]="formModel.invalid" *ngIf="updating">Actualizar</button>
+    <button type="submit" class="btn btn-dark" [disabled]="formModel.invalid" *ngIf="!updating">Añadir</button>
+    <button type="submit" class="btn btn-dark" [disabled]="formModel.invalid" *ngIf="updating">Actualizar</button>
 
 </form>

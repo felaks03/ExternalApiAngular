@@ -1,3 +1,7 @@
+.user-info{
+    display: flex;
+}
+
 .image, .data {
     width: 45vw;
     margin-top: 6rem;
@@ -7,7 +11,7 @@
 }
 .profile-i{
     width: 100%;
-    padding: 0 10rem;
+    padding: 0 10%;
     border-radius: 50%;
     justify-content: center;
 }
@@ -79,4 +83,48 @@
     color: grey;
     border: 3px solid grey;
     padding: 0.75rem 1.5rem;
+}
+.all-btn{
+    justify-content: start;
+}
+
+
+@media (max-width: 991px) {
+    .user-info{
+        display: block;
+    }
+    .data{
+        
+    }
+    .image{
+        margin: 3rem;
+        border: 0;
+    }
+    .profile-i{
+        width: calc(100vw - 6rem);
+
+    }
+    .data{
+        width: 100vw;
+    }
+    .names{
+        display: flex;
+        justify-content: center;
+    }
+    .nombre{
+        font-size: 2.5rem;
+        margin-right: 10px;
+    }
+    .apellido{
+        font-size: 2.5rem;
+    }
+    .username{
+        text-align: center;
+    }
+    .email{
+        text-align: center;
+    }
+    .all-btn{
+        justify-content: center;
+    }
 }

@@ -32,8 +32,9 @@ input {
 
 .btn {
     padding: 1rem;
-    width: max(20%, 100px);
+    width: max(20%, 120px);
     margin-top: 1rem;
+    font-size: 1.2rem;
 }
 
 .error {
