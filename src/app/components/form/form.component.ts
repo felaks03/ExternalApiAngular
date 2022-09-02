@@ -78,16 +78,11 @@ export class FormComponent implements OnInit {
 
   async getData(){
     if(this.formModel.value){
-      //Inserto el usuario en el array del api, pero como no se dibuja luego en la lista lo añado tambien a la base de datos local
-
       this.formModel.value.id = this.id
       this.id++
       let response = await this.usersService.getAll()
       this.myUsers = response.data
       this.myUsers?.push(this.formModel.value)
-      console.log(this.myUsers)
-
-      this.usersService.getAllNew().push(this.formModel.value)
 
       if(this.updating){
         Swal.fire({

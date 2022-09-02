@@ -34,7 +34,6 @@ export class ViewUserComponent implements OnInit {
     this.activatedRoute.params.subscribe((params: any) => {
       let id = params.id
       this.myUser = this.myUsers.find(user => user.id == id)
-      console.log(this.myUser)
     })
   }
 

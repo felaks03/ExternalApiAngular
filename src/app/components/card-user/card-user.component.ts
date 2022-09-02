@@ -18,10 +18,8 @@ export class CardUserComponent implements OnInit {
 
   myUsers: User[] = []
   async ngOnInit(): Promise<void> {
-    let newUsers = this.usersService.getAllNew()
     let response = this.arrData = await this.usersService.getAll()
     this.myUsers = response.data
-    this.myUsers = this.myUsers.concat(newUsers)
   }
 
   deleteUsers($event: any){
